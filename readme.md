@@ -9,6 +9,8 @@
 Tools I use:
 
    ▴ **WM** -> [Awesome-stable](https://awesomewm.org/)
+   
+   ▴ **Font** -> [Agave Nerd Font](https://www.nerdfonts.com/#home)
      
    ▴ **Terminal** -> [Rxvt-unicode](compiled with pixbuf enabled)
    
@@ -23,4 +25,4 @@ Tools I use:
    ▴ **Music Player** -> [ncmpcpp](modified)
 
 
-awesome polybar xorg alsa dunst picom vim rofi ranger playerctl feh lxappearance flameshot mpv ncmpcpp supergfxctl librewolf
+awesome polybar xorg alsa dunst picom vim rofi ranger playerctl feh lxappearance flameshot mpv ncmpcpp supergfxctl librewolf conky
