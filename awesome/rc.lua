@@ -21,6 +21,16 @@ local keys = require('keys')
 theme_path = string.format('%s/.config/awesome/themes/%s/theme.lua', os.getenv('HOME'), 'Morning')
 beautiful.init(theme_path)
 
+
+
+-- Jeg skal fix GEARS og check stable compatibility
+-- Loading the menu
+--system_menu = string.format('%s/.config/awesome/%s/menu.lua', os.getenv('HOME'), 'menu')
+--beautiful.init(system_menu)
+
+
+
+
 -- Set the wallpaper
 local function set_wallpaper(s)
     if beautiful.wallpaper then
@@ -70,7 +80,7 @@ awful.screen.connect_for_each_screen(function(s)
     end
     ]]
 
-    awful.tag({ "1", "2", "3", "4", "5", "6" }, s, awful.layout.layouts[1])
+    awful.tag({ "main", "www", "media", "dev", "chat", "misc" }, s, awful.layout.layouts[1])
 end)
 
 awful.rules.rules = {
@@ -112,6 +122,9 @@ awful.spawn.with_shell('~/.config/polybar/launch.sh')
 awful.spawn.with_shell('~/.config/awesome/anime.sh')
 awful.spawn.with_shell('picom')
 awful.spawn.with_shell('dunst')
+awful.spawn.with_shell('mpd')
+awful.spawn.with_shell('conky')
+
 --awful.spawn.with_shell('feh --bg-scale ~/.config/awesome/themes/Morning/wallpaper.jpg')
 
 -- Garbage Collection

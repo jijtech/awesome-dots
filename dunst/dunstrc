@@ -43,7 +43,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 64 # Icon size
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/gnome/8x8/status/:/usr/share/icons/gnome/8x8/devices/
 
     sticky_history = yes
     history_length = 20
@@ -74,7 +74,7 @@
 [urgency_low]
     background = "#1E1E1E"
     foreground = "#DDDDDD"
-    timeout = 5 # Close automatically after 5 seconds
+    timeout = 10 # Close automatically after 10 seconds
     icon = ~/.config/dunst/bell.png
 
 [urgency_normal]
