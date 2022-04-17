@@ -9,7 +9,7 @@
 
 configuration {
     show-icons:                     false;
-	font:                      		"Comfortaa 14";
+	font:                      		"Comfortaa 12";
     disable-history:                false;
 	sidebar-mode: 					false;
 }
@@ -25,9 +25,9 @@ window {
     transparency:                   "real";
     border-radius:                  0px;
     location:                       center;
-    width:                       	650px;
-    x-offset:                       0px;
-    y-offset:                       0px;
+    width:                       	500px;
+    x-offset:                       680px;
+    y-offset:                       -410px;
 }
 
 prompt {
@@ -75,31 +75,31 @@ mainbox {
     background-color:               @background;
     children:                       [ inputbar, listview ];
     spacing:                        15px;
-    margin:                         40px;
+    margin:                         20px;
 }
 
 element {
     background-color:               @background-light;
     text-color:                     @foreground;
     orientation:                    vertical;
-    border-radius:                  0px;
+    border-radius:                  5px;
 }
 
 element-text {
     background-color: 				inherit;
     text-color:       				inherit;
-	font:							"feather 32";
+	font:							"feather 16";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         40px 0px 40px 0px;
+    margin:                         0px 0px 0px 0px;
 }
 
 element normal.urgent,
 element alternate.urgent {
     background-color:               @off;
     text-color:                     @background;
-    border-radius:                  0px;
+    border-radius:                  5px;
 }
 
 element normal.active,
@@ -112,7 +112,7 @@ element selected {
     background-color:               @accent;
     text-color:                     @background;
     border:                  		0px;
-    border-radius:                  0px;
+    border-radius:                  5px;
     border-color:                  	@border;
 }
 
