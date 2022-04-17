@@ -16,10 +16,26 @@ CONFIG_DRM_AMD_ACP=y
 CONFIG_DRM_AMD_DC=y
 CONFIG_DRM_AMD_DC_DCN=y
 CONFIG_DRM_AMD_DC_HDCP=y
+--------------------------
 
 eselect repository add zGentoo
 emaint sync -r zGentoo && emerge -1u asusctl
 don't forget to run: emerge --ask @x11-module-rebuild after changing make.conf to libinput
+
+1. there is no way to use this tools without systemd. (asusctl and supergfxctl depending on it)
+tbh. OpenRC and all the other standard-inits are nice, but not on modern desktop environments. state of the art is defacto systemd. (IMHO)
+
+2. not mounting lvm (also when using luks/dm-crypt) is more a grub/initrd problem then systemd. (check your boot-configuration, for grub in example: /etc/default/grub)
+
+Here are some things you should take a look into:
+- gentoo systemd (https://wiki.gentoo.org/wiki/Systemd)
+- gentoo lvm (https://wiki.gentoo.org/wiki/LVM)
+- gentoo grub (https://wiki.gentoo.org/wiki/GRUB2)
+- gentoo genkernel(https://wiki.gentoo.org/wiki/Genkernel) or dracut(https://wiki.gentoo.org/wiki/Dracut)
+- zgentoo https://lab.retarded.farm/zappel/zGentoo
+- emerge -a genfstab
+- emerge -a ufed
+
 
 #### MAKE CONF ####
 CFLAGS="-march=znver2 -O2 -pipe"
