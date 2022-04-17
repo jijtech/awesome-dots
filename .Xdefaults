@@ -1,47 +1,46 @@
-##### THIS FILE IS BEING CURRENTLY MANAGED BY URXVTCONFIG #####
-##### CHANGES DONE TO THIS FILE MANUALLY MAY AFFECT THE FUNCTIONALITY ######
-##### PROCEED WITH CAUTION! #####
+URxvt.background:	#1E1E1E
+URxvt.foreground:	#DEDEDE
+ black
+URxvt.color0: #6E6C7E
+URxvt.color8: #6E6C7E
 
-urxvt*background:       #212629
-urxvt*foreground:       #737c80
-!black
-URxvt*color0:           #111313
-URxvt*color8:           #424446
-!red
-URxvt*color1:           #9e6b71
-URxvt*color9:           #b69094
-!green
-URxvt*color2:           #719e6b
-URxvt*color10:          #94b690
-!yellow
-URxvt*color3:           #9e986c
-URxvt*color11:          #b5b18f
-!blue
-URxvt*color4:           #6c8b9e
-URxvt*color12:          #90a7b6
-!magenta
-URxvt*color5:           #986b9e
-URxvt*color13:          #b290b6
-!cyan
-URxvt*color6:           #6b9e98
-URxvt*color14:          #90b6b3
-!white
-URxvt*color7:           #b8baba
-URxvt*color15:          #cdcfce
+! red
+URxvt.color1: #E38C8F
+URxvt.color9: #E38C8F
 
-URxvt*scrollBar:         false
-URxvt*scrollBar_right:   false
+! green
+URxvt.color2: #B1E3AD
+URxvt.color10: #B1E3AD
 
-URxvt*transparent:       false
+! yellow
+URxvt.color3: #EBDDAA
+URxvt.color11: #EBDDAA
 
-URxvt*depth: 32
+! blue
+URxvt.color4: #5575cb
+URxvt.color12: #5575cb
 
-URxvt.font: xft:Cantarell:pixelsize=14
-URxvt.letterSpace: -4
+! purple
+URxvt.color5: #6e56af
+URxvt.color13: #6e56af
 
+! pink
+URxvt.color6: #8888cc
+URxvt.color14: #8888cc
+
+! white
+URxvt.color7: #DADAE8
+URxvt.color15: #DADAE8
+
+URxvt.font:			xft:agave Nerd font :pixelsize=18:antialias=true:hinting=true
+URxvt.boldFont:		xft:agave Nerd font :bold:pixelsize=18:antialias=true:hinting=true
 *antialias:  true
 *autohint:   true
-
+URxvt.scrollBar:	false
+URxvt.saveLines:	65535
+Xft*dpi:       96
+Xft*antialias: True
+Xft*hinting:   Full
 ! Restore Ctrl+Shift+(c|v)
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
