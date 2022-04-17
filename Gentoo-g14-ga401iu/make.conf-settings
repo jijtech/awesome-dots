@@ -36,8 +36,49 @@ Here are some things you should take a look into:
 - emerge -a genfstab
 - emerge -a ufed
 
+Finally got it updated, see https://lab.retarded.farm/zappel/zGentoo for more information or overlay installation instructions.
+
+Current (major) changes/updates:
+
+- added asusctl 4.x
+- added supergfxctl 2.x
+- added power-profiles-daemon 0.10.1
+- added gnome-shell-extension-asusctl-gex 4.0.1
+- added gentoo-sources-rog 5.15.1 (Make sure to enable: CONFIG_FB_EFI)
+
+Upgrade instructions:
+
+Due to a slot-change it is needed to uninstall asusctl before upgrading it to avoid file-collisions:
+
+emerge -C asusctl && emerge asusctl
+# starting/enabeling needed deamons
+systemctl daemon-reload
+systemctl enable --now power-profiles-daemon
+systemctl enable --now supergfxd
+systemctl reload dbus
+# finally reload udev and load the changed rules
+udevadm control --reload-rules && udevadm trigger
+
+
+To downgrade from asusctl version 4.x (in case something isn't working as expected) back to 3.x do the following:
+
+In case of using 3.x version permanently, mask the version above 4.0.0:  echo ">=sys-power/asusctl-4.0.0" >> /etc/portage/package.mask/asusctl
+
+Finally remove the 4.x versions and reinstall slot 0/3:
+
+emerge -C sys-power/asusctl sys-power/supergfxctl gnome-extra/gnome-shell-extension-asusctl-gex
+emerge asusctl:0/3
+
+
+To upgrade back to 4.x is nearly the same:
+
+rm -f /etc/portage/package.mask/asusctl
+emerge -C sys-power/asusctl sys-power/supergfxctl gnome-extra/gnome-shell-extension-asusctl-gex
+emerge asusctl
+
 
 #### MAKE CONF ####
+
 CFLAGS="-march=znver2 -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 CHOST="x86_64-pc-linux-gnu"
