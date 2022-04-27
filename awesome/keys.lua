@@ -57,6 +57,8 @@ keys.globalkeys = gears.table.join(
               {description='pcmanfm', group='Applications'}),
     awful.key({metakey,}, 'e', function() awful.util.spawn('urxvt -e ranger  ') end,
               {description='Ranger', group='Applications'}),
+    awful.key({metakey,}, 'c', function() awful.util.spawn('speedcrunch') end,
+              {description='Calculator', group='Applications'}),
     -- Media Keys
     awful.key({metakey}, 'F3', function() awful.util.spawn('playerctl play-pause') end,
               {description='Play/Pause', group='Media Keys'}),
