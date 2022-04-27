@@ -25,4 +25,4 @@ Tools I use:
    ▴ **Music Player** -> [ncmpcpp](modified)
 
 
-awesome polybar xorg alsa dunst picom vim rofi ranger playerctl feh lxappearance flameshot mpv ncmpcpp supergfxctl librewolf conky
+awesome polybar xorg alsa dunst picom vim rofi ranger playerctl feh lxappearance flameshot mpv ncmpcpp supergfxctl librewolf speecrunch
