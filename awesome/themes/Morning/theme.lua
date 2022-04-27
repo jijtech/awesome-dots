@@ -3,7 +3,7 @@
 
 local theme = {}
 
-theme.font          = 'JetBrains Mono 10'
+theme.font          = 'agave nerd font 12'
 
 theme.bg_normal     = "#37395E"
 theme.bg_focus      = "#81a1c1"
@@ -26,13 +26,13 @@ theme.border_marked = "#1E1E1E"
 theme.hotkeys_bg = '#1E1E1E'
 theme.hotkeys_fg = '#81a1c1'
 theme.hotkeys_opacity = '0.9'
-theme.hotkeys_border_width = 3
-theme.hotkeys_border_color = '#48FFDC'
-theme.hotkeys_modifiers_fg = '#1DFF79'
-theme.hotkeys_label_fg = '#1B1D27'
-theme.hotkeys_font = 'JetBrains Mono 10'
-theme.hotkeys_description_font = 'Fira Code 10'
-theme.hotkeys_group_margin = 20
+theme.hotkeys_border_width = 1
+theme.hotkeys_border_color = '#81a1c1'
+theme.hotkeys_modifiers_fg = '#8888CC'
+theme.hotkeys_label_fg = '#1e1e1e'
+theme.hotkeys_font = 'agave nerd font 14'
+theme.hotkeys_description_font = 'agave nerd font 14'
+theme.hotkeys_group_margin = 15
 
 -- Wallpaper
 theme.wallpaper = '~/.config/awesome/themes/Morning/wallpaper.jpg'

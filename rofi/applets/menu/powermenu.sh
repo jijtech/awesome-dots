@@ -11,8 +11,8 @@ dir="$HOME/.config/rofi/applets/menu/configs/$style"
 rofi_command="rofi -theme $dir/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
-cpu=$($HOME/.config/rofi/bin/usedcpu)
-memory=$($HOME/.config/rofi/bin/usedram)
+#cpu=$($HOME/.config/rofi/bin/usedcpu)
+#memory=$($HOME/.config/rofi/bin/usedram)
 
 # Options
 shutdown=""
@@ -38,7 +38,7 @@ msg() {
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
 
-chosen="$(echo -e "$options" | $rofi_command -p "$uptime  | CPU $cpu | RAM $memory " -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -p "$uptime  | Never settle" -dmenu -selected-row 2)"
 case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)

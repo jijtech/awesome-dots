@@ -130,3 +130,4 @@ awful.spawn.with_shell('conky')
 -- Garbage Collection
 collectgarbage('setpause', 110)
 collectgarbage('setstepmul', 1000)
+--require('smart_borders'){ show_button_tooltips = true }
