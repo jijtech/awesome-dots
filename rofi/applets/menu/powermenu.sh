@@ -11,7 +11,7 @@ dir="$HOME/.config/rofi/applets/menu/configs/$style"
 rofi_command="rofi -theme $dir/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
-asusmode=$($HOME/.config/rofi/bin/asusmode)
+asusmode=$(supergfxctl -g)
 #avatar=$(feh %g 300x300 "$HOME/.config/awesome/themes/Morning/avatar.png")
 
 # Options
