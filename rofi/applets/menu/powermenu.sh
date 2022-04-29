@@ -11,7 +11,7 @@ dir="$HOME/.config/rofi/applets/menu/configs/$style"
 rofi_command="rofi -theme $dir/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
-#cpu=$($HOME/.config/rofi/bin/usedcpu)
+asusmode=$($HOME/.config/rofi/bin/asusmode)
 #memory=$($HOME/.config/rofi/bin/usedram)
 
 # Options
@@ -35,10 +35,12 @@ msg() {
 	rofi -theme "$HOME/.config/rofi/applets/styles/message.rasi" -e "Available Options  -  yes / y / no / n"
 }
 
+#AVATAR / brug feh eller rofi
+
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
 
-chosen="$(echo -e "$options" | $rofi_command -p "$uptime  | Never settle" -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -p "$uptime  | $asusmode " -dmenu -selected-row 2)"
 case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)
