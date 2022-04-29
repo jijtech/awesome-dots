@@ -8,7 +8,7 @@
  */
 
 configuration {
-    show-icons:                     false;
+    show-icons:                     true;
 	font:                      		"Nerdfont mono 10";
     disable-history:                false;
 	sidebar-mode: 					false;
