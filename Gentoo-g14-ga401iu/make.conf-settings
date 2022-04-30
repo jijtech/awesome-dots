@@ -1,136 +1,25 @@
-Kernel 5.11 or newer:
-Device Drivers  --->
-  [*] X86 Platform Specific Device Drivers  --->
-    <*>   AMD SoC PMC driver
-
-CONFIG_PINCTRL_AMD
-CONFIG_HID_ASUS
-CONFIG_I2C_HID_ACPI
-CONFIG_I2C_HID_CORE
-CONFIG_I2C_DESIGNWARE_PLATFORM
-CONFIG_DRM_AMDGPU=m
-CONFIG_DRM_AMDGPU_SI=y
-CONFIG_DRM_AMDGPU_CIK=y
-CONFIG_DRM_AMDGPU_USERPTR=y
-CONFIG_DRM_AMD_ACP=y
-CONFIG_DRM_AMD_DC=y
-CONFIG_DRM_AMD_DC_DCN=y
-CONFIG_DRM_AMD_DC_HDCP=y
---------------------------
-
-eselect repository add zGentoo
-emaint sync -r zGentoo && emerge -1u asusctl
-don't forget to run: emerge --ask @x11-module-rebuild after changing make.conf to libinput
-
-1. there is no way to use this tools without systemd. (asusctl and supergfxctl depending on it)
-tbh. OpenRC and all the other standard-inits are nice, but not on modern desktop environments. state of the art is defacto systemd. (IMHO)
-
-2. not mounting lvm (also when using luks/dm-crypt) is more a grub/initrd problem then systemd. (check your boot-configuration, for grub in example: /etc/default/grub)
-
-Here are some things you should take a look into:
-- gentoo systemd (https://wiki.gentoo.org/wiki/Systemd)
-- gentoo lvm (https://wiki.gentoo.org/wiki/LVM)
-- gentoo grub (https://wiki.gentoo.org/wiki/GRUB2)
-- gentoo genkernel(https://wiki.gentoo.org/wiki/Genkernel) or dracut(https://wiki.gentoo.org/wiki/Dracut)
-- zgentoo https://lab.retarded.farm/zappel/zGentoo
-- emerge -a genfstab
-- emerge -a ufed
-
-Finally got it updated, see https://lab.retarded.farm/zappel/zGentoo for more information or overlay installation instructions.
-
-Current (major) changes/updates:
-
-- added asusctl 4.x
-- added supergfxctl 2.x
-- added power-profiles-daemon 0.10.1
-- added gnome-shell-extension-asusctl-gex 4.0.1
-- added gentoo-sources-rog 5.15.1 (Make sure to enable: CONFIG_FB_EFI)
-
-Upgrade instructions:
-
-Due to a slot-change it is needed to uninstall asusctl before upgrading it to avoid file-collisions:
-
-emerge -C asusctl && emerge asusctl
-# starting/enabeling needed deamons
-systemctl daemon-reload
-systemctl enable --now power-profiles-daemon
-systemctl enable --now supergfxd
-systemctl reload dbus
-# finally reload udev and load the changed rules
-udevadm control --reload-rules && udevadm trigger
-
-
-To downgrade from asusctl version 4.x (in case something isn't working as expected) back to 3.x do the following:
-
-In case of using 3.x version permanently, mask the version above 4.0.0:  echo ">=sys-power/asusctl-4.0.0" >> /etc/portage/package.mask/asusctl
-
-Finally remove the 4.x versions and reinstall slot 0/3:
-
-emerge -C sys-power/asusctl sys-power/supergfxctl gnome-extra/gnome-shell-extension-asusctl-gex
-emerge asusctl:0/3
-
-
-To upgrade back to 4.x is nearly the same:
-
-rm -f /etc/portage/package.mask/asusctl
-emerge -C sys-power/asusctl sys-power/supergfxctl gnome-extra/gnome-shell-extension-asusctl-gex
-emerge asusctl
-
-
 #### MAKE CONF ####
 
 CFLAGS="-march=znver2 -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 CHOST="x86_64-pc-linux-gnu"
-#FEATURES="ccache"
-#CCACHE_DIR="/var/cache/ccache"
+  # FEATURES="ccache"
+  # CCACHE_DIR="/var/cache/ccache"
 MAKEOPTS="-j12"
 
-USE="mmx mmxext sse sse2 ssse3 sse4_1 sse4_2 avx 3dnow \
-libinput systemd gnome acpi debug gfx notify test \
-kernel-builtin lz4 gpg nls selinux altivec bash-completion zsh-completion  \
-gtk x elogind wayland xwayland corefonts dbus doc xft policykit alsa pulseaudio \
-opengl lua tools jack imlib nls seccomp \
- -kde \ "
--java?
+USE=" systemd acpi x elogind udev udisks alsa pipewire lua python  \
+-emacs -xemacs -kde -qt  "
 
-
-GENTOO_MIRRORS="http://gentoo.osuosl.org/ http://www.gtlib.gatech.edu/pub/gentoo http://distfiles.gentoo.org/"?
-
-
-PORTAGE_NICENESS=19?
-PORTAGE_IONICE_COMMAND="/usr/local/sbin/portage-cgroup \${PID}"?
-
-?PORTAGE_GPG_DIR="/etc/portage/gnupg"
-?PORTAGE_GPG_DIR="/var/lib/gentoo/gkeys/keyrings/gentoo/release"
-?PORTAGE_GPG_KEY="0x2471eb3e40ac5ac3"
-?PORTAGE_GPG_SIGNING_COMMAND=""
-
-?PAX_MARKINGS="XT"
-?LINGUAS="en en_DK"
 ?VIDEO_CARDS="intel i965"
 INPUT_DEVICES="libinput synaptics evdev"
 
-PORT_LOGDIR="/usr/portage/log"
-?PORTAGE_ELOG_CLASSES="info warn error log qa"
-?PORTAGE_ELOG_SYSTEM="save_summary mail_summary"
-?PORTAGE_ELOG_MAILURI="mthode@mthode.org /usr/sbin/sendmail"
-?PORTAGE_ELOG_MAILFROM="portage@${HOST}"
-
 PYTHON_TARGETS="python2_7 python3_5 python3_6"
 PYTHON_SINGLE_TARGET="python3_5"
-?RUBY_TARGETS="ruby22"
 
 ACCEPT_LICENSE="*"
 ?POLICY_TYPES="strict"
 
 ?QEMU_SOFTMMU_TARGETS="arm aarch64 i386 x86_64"
 ?QEMU_USER_TARGETS="arm aarch64 i386 x86_64"
-
-?PORTDIR="/usr/portage"
-?DISTDIR="${PORTDIR}/distfiles"
-?PKGDIR="${PORTDIR}/packages"
-
-?INSTALL_MASK="/usr/share/cursors/xorg-x11/Adwaita"
 
 ?source /var/lib/layman/make.conf
