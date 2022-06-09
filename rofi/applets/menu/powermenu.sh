@@ -15,11 +15,11 @@ asusmode=$(supergfxctl -g)
 #avatar=$(feh %g 300x300 "$HOME/.config/awesome/themes/Morning/avatar.png")
 
 # Options
-shutdown=""
-reboot=""
-lock=""
-suspend=""
-logout=""
+shutdown=""
+reboot=""
+lock=""
+suspend=""
+logout=""
 
 # Confirmation
 confirm_exit() {
