@@ -40,6 +40,9 @@ keys.globalkeys = gears.table.join(
               {description='KBLight Up', group='Awesome'}),
     awful.key({metakey,}, 'Down', function() awful.util.spawn_with_shell("asusctl -p") end,
               {description='KBLight Down', group='Awesome'}),
+              awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end),
+              awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end),
+              awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end),
 
 
     -- Window management
