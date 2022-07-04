@@ -34,6 +34,13 @@ keys.globalkeys = gears.table.join(
               {description = "Quit awesome", group = "awesome"}),
     awful.key({metakey,}, 'q', function() awful.util.spawn_with_shell("sh ~/.config/rofi/applets/menu/powermenu.sh") end,
               {description='Powermenu', group='Awesome'}),
+    awful.key({metakey,}, 'Up', function() awful.util.spawn_with_shell("asusctl -n") end,
+              {description='KBLight Up', group='Awesome'}),
+    awful.key({metakey,}, 'Up', function() awful.util.spawn_with_shell("asusctl -n") end,
+              {description='KBLight Up', group='Awesome'}),
+    awful.key({metakey,}, 'Down', function() awful.util.spawn_with_shell("asusctl -p") end,
+              {description='KBLight Down', group='Awesome'}),
+
 
     -- Window management
     awful.key({'Mod1',}, 'Tab', function() awful.client.focus.byidx(1) end,
