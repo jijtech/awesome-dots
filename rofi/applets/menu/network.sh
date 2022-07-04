@@ -23,9 +23,9 @@ urgent=""
 if (ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null; then
 	if [[ $STATUS == *"enable"* ]]; then
         if [[ $IFACE == e* ]]; then
-            connected=""
+            connected="﬉"
         else
-            connected=""
+            connected="﬉"
         fi
 	active="-a 0"
 	SSID="﬉ $(iwgetid -r)"
@@ -35,13 +35,13 @@ else
     urgent="-u 0"
     SSID="Disconnected"
     PIP="Not Available"
-    connected=""
+    connected=">Turn On"
 fi
 
 ## Icons
-bmon=""
-launch_cli=""
-launch=""
+bmon=""
+launch_cli=""
+launch="settings"
 
 options="$connected\n$bmon\n$launch_cli\n$launch"
 
@@ -56,7 +56,7 @@ case $chosen in
 		fi 
         ;;
     $bmon)
-        urxvt -e bmon
+        urxvt -e blueman
         ;;
     $launch_cli)
         urxvt -e nmtui
