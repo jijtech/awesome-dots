@@ -12,7 +12,7 @@ rofi_command="rofi -theme $dir/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
 asusmode=$(supergfxctl -g)
-#avatar=$(feh %g 300x300 "$HOME/.config/awesome/themes/Morning/avatar.png")
+powermode=$(powerprofilesctl get)
 
 # Options
 shutdown=""
@@ -40,7 +40,9 @@ msg() {
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
 
-chosen="$(echo -e "$options" | $rofi_command -p "$uptime  | $asusmode " -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime
+GPU Mode: $asusmode
+Powermode: $powermode" -dmenu -selected-row 2)"
 case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)
