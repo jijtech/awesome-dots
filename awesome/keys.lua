@@ -18,7 +18,7 @@ editor_launch = terminal..' -e '..editor
 
 -- Keybindings
 keys.globalkeys = gears.table.join(
-   
+       
     -- Awesome
     awful.key({metakey, 'Shift'}, 'r', awesome.restart,
               {description = 'Reload awesome', group = 'Awesome'}),
@@ -31,7 +31,9 @@ keys.globalkeys = gears.table.join(
     awful.key({metakey}, 'Escape', awful.tag.history.restore,
               {description='Return to last tag', group='Tags'}),
     awful.key({metakey, "Shift"   }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
+              {description = "Quit awesome", group = "awesome"}),
+    awful.key({metakey,}, 'q', function() awful.util.spawn_with_shell("sh ~/.config/rofi/applets/menu/powermenu.sh") end,
+              {description='Powermenu', group='Awesome'}),
 
     -- Window management
     awful.key({'Mod1',}, 'Tab', function() awful.client.focus.byidx(1) end,
@@ -51,27 +53,14 @@ keys.globalkeys = gears.table.join(
               {description='Notes', group='Applications'}),
     awful.key({metakey}, 'r', function() awful.util.spawn('rofi -show drun') end,
               {description='Rofi', group='Applications'}),
-    awful.key({metakey}, 'b', function() awful.util.spawn('librewolf') end,
-              {description='LibreWolf', group='Applications'}),
+    awful.key({metakey}, 'b', function() awful.util.spawn('firefox') end,
+              {description='Firefox', group='Applications'}),
     awful.key({metakey,'Shift'}, 'e', function() awful.util.spawn('pcmanfm  ') end,
               {description='pcmanfm', group='Applications'}),
     awful.key({metakey,}, 'e', function() awful.util.spawn('urxvt -e ranger  ') end,
               {description='Ranger', group='Applications'}),
     awful.key({metakey,}, 'c', function() awful.util.spawn('speedcrunch') end,
               {description='Calculator', group='Applications'}),
-    -- Media Keys
-    awful.key({metakey}, 'F3', function() awful.util.spawn('playerctl play-pause') end,
-              {description='Play/Pause', group='Media Keys'}),
-    awful.key({metakey,'shift'}, 'F4', function() awful.util.spawn('amixer set Master 5%+') end,
-              {description='Increase Volume (by 5%)', group='Media Keys'}),
-    awful.key({metakey,'shift'}, 'F2', function() awful.util.spawn('amixer set Master 5%-') end,
-              {description='Decrease Volume (by 5%)', group='Media Keys'}),
-    awful.key({metakey,'shift'}, 'F1', function() awful.util.spawn('amixer set Master toggle') end,
-              {description='Mute/Unmute', group='Media Keys'}),
-    awful.key({metakey}, 'F4', function() awful.util.spawn('playerctl next') end,
-              {description='Next track', group='Media Keys'}),
-    awful.key({metakey}, 'F2', function() awful.util.spawn('playerctl previous') end,
-              {description='Previous Track', group='Media Keys'}),
 
     -- Screenshots
     awful.key({metakey}, 'Print', function() awful.util.spawn('flameshot full -p '..os.getenv('HOME')..'/Pictures') end,
