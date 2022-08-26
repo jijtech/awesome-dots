@@ -1,4 +1,5 @@
-URxvt.background:	#1E1E1E
+urxvt*depth: 32
+urxvt*background: rgba:3000/3000/3000/c800
 URxvt.foreground:	#DEDEDE
  black
 URxvt.color0: #6E6C7E
