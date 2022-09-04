@@ -8,6 +8,7 @@
  */
 
 configuration {
+modi:                       "filebrowser";
     show-icons:                     true;
 	font:                      		"Nerdfont mono 10";
     disable-history:                false;
@@ -25,11 +26,11 @@ window {
     transparency:                   "real";
     border-radius:                  10px;
     border:                  		0px 0px 4px 0px;
-    location:                       north east;
-    width:                       	450px;
-    height:							30%;
-    x-offset:                       -10px;
-    y-offset:                       50px;
+    location:                       south;
+    width:                       	620px;
+    height:							15%;
+    x-offset:                       10px;
+    y-offset:                       -50px;
     margin:                         0px 0px 0px 0px;
 }
 
@@ -45,15 +46,15 @@ prompt {
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							" System ";
+	str: 							" TEXT ";
 	background-color: 				@accent;
 	text-color: 					@background;
-    padding:                        12px 10px 0px 10px;
+    padding:                        20px 20px 0px 20px;
 }
 
 inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
-    spacing:                        0px;
+    spacing:                        10px;
     background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
@@ -62,12 +63,12 @@ inputbar {
     border-color:                  	@accent;
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
-    position:                       center;
+    position:                       east;
 }
 
 listview {
-    columns:						5;
-    lines:							5;
+    columns:						15;
+    lines:							15;
     spacing:                        20px;
     cycle:                          true;
     dynamic:                        true;
@@ -78,7 +79,7 @@ mainbox {
     background-color:               @background;
     children:                       [ inputbar, listview ];
     spacing:                        5px;
-    margin:                         40px;
+    margin:                         8px;
     border-radius:                  5px;
 }
 
@@ -86,7 +87,9 @@ element {
     background-color:               @background-light;
     text-color:                     @foreground;
     orientation:                    vertical;
-    border-radius:                  5px;
+    border-radius:                  0px;
+    position:                       east;
+
 }
 
 element-text {
@@ -129,3 +132,4 @@ element selected.active {
     background-color:               @off;
     color:                          @background;
 }
+
