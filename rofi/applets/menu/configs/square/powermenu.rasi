@@ -8,7 +8,7 @@
  */
 
 configuration {
-modi:                       "filebrowser";
+modi:                       "secound-prompt";
     show-icons:                     true;
 	font:                      		"Nerdfont mono 10";
     disable-history:                false;
@@ -25,9 +25,9 @@ modi:                       "filebrowser";
 window {
     transparency:                   "real";
     border-radius:                  10px;
-    border:                  		0px 0px 4px 0px;
+    border:                  		5px 5px 5px 5px;
     location:                       south;
-    width:                       	620px;
+    width:                       	480px;
     height:							15%;
     x-offset:                       10px;
     y-offset:                       -50px;
@@ -39,17 +39,17 @@ prompt {
     padding:                        10px;
 	background-color: 				@background-light;
 	text-color: 					@accent;
-    border:                  		2px 2px 4px 2px;
+    border:                  		1px 1px 1px 70px;
     border-radius:                  0px;
     border-color:                  	@accent;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							" TEXT ";
+	str: 							" Sys status ";
 	background-color: 				@accent;
 	text-color: 					@background;
-    padding:                        20px 20px 0px 20px;
+    padding:                        10px 10px 0px 10px;
 }
 
 inputbar {
@@ -63,7 +63,7 @@ inputbar {
     border-color:                  	@accent;
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
-    position:                       east;
+    position:                       center;
 }
 
 listview {
@@ -88,18 +88,18 @@ element {
     text-color:                     @foreground;
     orientation:                    vertical;
     border-radius:                  0px;
-    position:                       east;
+    position:                       center;
 
 }
 
 element-text {
     background-color: 				inherit;
     text-color:       				inherit;
-	font:							"feather 14";
+	font:							"feather 20";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         0px 0px 0px 0px;
+    margin:                         0px 15px 0px 15px;
 }
 
 element normal.urgent,
