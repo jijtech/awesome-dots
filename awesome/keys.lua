@@ -67,7 +67,7 @@ keys.globalkeys = gears.table.join(
               {description='Firefox', group='Applications'}),
     awful.key({metakey,'Shift'}, 'e', function() awful.util.spawn('pcmanfm  ') end,
               {description='pcmanfm', group='Applications'}),
-    awful.key({metakey,}, 'e', function() awful.util.spawn('urxvt -e ranger  ') end,
+    awful.key({metakey,}, 'e', function() awful.util.spawn('alacritty -e ranger  ') end,
               {description='Ranger', group='Applications'}),
     awful.key({metakey,}, 'c', function() awful.util.spawn('speedcrunch') end,
               {description='Calculator', group='Applications'}),
