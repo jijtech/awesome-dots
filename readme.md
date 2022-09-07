@@ -21,4 +21,4 @@ Tools I use:
    ▴ **Doc Viewer** -> [Zathura]
 
 
-awesome polybar xorg alsa dunst picom vim rofi ranger playerctl feh lxappearance flameshot supergfxctl firefox speedcrunch
+awesome polybar xorg alsa dunst picom vim rofi ranger playerctl lxappearance flameshot supergfxctl firefox speedcrunch
