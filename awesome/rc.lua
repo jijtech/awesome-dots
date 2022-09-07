@@ -1,8 +1,8 @@
---     ___                                        
---    /   |_      _____  _________  ________  ___ 
+--     ___
+--    /   |_      _____  _________  ________  ___
 --   / /| | | /| / / _ \/ ___/ __ \/ __  __ \/ _ \
 --  / ___ | |/ |/ /  __(__  ) /_/ / / / / / /  __/
--- /_/  |_|__/|__/\___/____/\____/_/ /_/ /_/\___/ 
+-- /_/  |_|__/|__/\___/____/\____/_/ /_/ /_/\___/
 
 -- AWESOME CONFIG (~/.config/awesome/rc.lua)
 -------------------------------------------------------
@@ -17,19 +17,9 @@ require('awful.autofocus')
 local beautiful = require('beautiful')
 local keys = require('keys')
 
--- Loading the theme
+--------------------- Loading the theme ---------------------
 theme_path = string.format('%s/.config/awesome/themes/%s/theme.lua', os.getenv('HOME'), 'Morning')
 beautiful.init(theme_path)
-
-
-
--- Jeg skal fix GEARS og check stable compatibility
--- Loading the menu
---system_menu = string.format('%s/.config/awesome/%s/menu.lua', os.getenv('HOME'), 'menu')
---beautiful.init(system_menu)
-
-
-
 
 -- Set the wallpaper
 local function set_wallpaper(s)
@@ -49,7 +39,7 @@ for s = 1, screen.count() do
 	gears.wallpaper.maximized(beautiful.wallpaper, s, true)
 end
 
--- Layouts
+--------------------- Layouts ---------------------
 awful.layout.layouts = {
     awful.layout.suit.fair,
     awful.layout.suit.floating,
@@ -96,7 +86,7 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
                    }
     },
-        
+
     -- Floating exceptions
     { rule_any = {
             class = {'Lxappearance', 'qt5ct'},
@@ -108,16 +98,16 @@ awful.rules.rules = {
     }
 }
 
--- Enable sloppy focus
+--------------------- Enable sloppy focus ---------------------
 client.connect_signal('mouse::enter', function(c)
     c:emit_signal('request::activate', 'mouse_enter', {raise = false})
 end)
 
--- Colored borders
+--------------------- Colored borders ---------------------
 client.connect_signal('focus', function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal('unfocus', function(c) c.border_color = beautiful.border_normal end)
 
--- Autostart
+--------------------- Autostart ---------------------
 awful.spawn.with_shell('~/.config/polybar/launch.sh')
 awful.spawn.with_shell('~/.config/awesome/anime.sh')
 awful.spawn.with_shell('picom')
