@@ -14,19 +14,19 @@ shell:
 # Font
 font:
   normal:
-    family: JetBrains Mono
+    family: Agave nerdfont
     style: Medium
 
   bold:
-    family: JetBrains Mono
+    family: Agave nerdfont
     style: Bold
 
   italic:
-    family: JetBrains Mono
+    family: Agave nerdfont
     style: Italic
 
   bold_italic:
-    family: JetBrains Mono
+    family: Agave nerdfont
     style: Bold Italic
 
   size: 14.5
