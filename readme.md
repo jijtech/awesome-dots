@@ -12,17 +12,13 @@ Tools I use:
    
    ▴ **Font** -> [Agave Nerd Font](https://www.nerdfonts.com/#home)
      
-   ▴ **Terminal** -> [Rxvt-unicode](compiled with pixbuf enabled)
+   ▴ **Terminal** -> [Alacritty]
    
    ▴ **Launcher** -> [Rofi](drun mode)
 
    ▴ **FileManager** -> [Ranger]
   
    ▴ **Doc Viewer** -> [Zathura]
-   
-   ▴ **Video Player** -> [Mpv]
-
-   ▴ **Music Player** -> [ncmpcpp](modified)
 
 
-awesome polybar xorg alsa dunst picom vim rofi ranger playerctl feh lxappearance flameshot mpv ncmpcpp supergfxctl firefox speedcrunch
+awesome polybar xorg alsa dunst picom vim rofi ranger playerctl feh lxappearance flameshot supergfxctl firefox speedcrunch
