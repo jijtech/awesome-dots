@@ -1,12 +1,12 @@
--- Awesome keybindings
-
--- Importing libraries
+--------------------- Awesome keybindings ---------------------
+---------------------------------------------------------------
+--------------------- Importing libraries ---------------------
 local gears = require('gears')
 local awful = require('awful')
 local hotkeys_popup = require('awful.hotkeys_popup')
 require('awful.hotkeys_popup.keys')
 
--- Variables
+--------------------- Variables ---------------------
 local keys = {}
 
 metakey = 'Mod4'
@@ -16,9 +16,9 @@ terminal = 'urxvt'
 editor = 'vim'
 editor_launch = terminal..' -e '..editor
 
--- Keybindings
+--------------------- Keybindings ---------------------
 keys.globalkeys = gears.table.join(
-       
+
     -- Awesome
     awful.key({metakey, 'Shift'}, 'r', awesome.restart,
               {description = 'Reload awesome', group = 'Awesome'}),
@@ -45,7 +45,7 @@ keys.globalkeys = gears.table.join(
               awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end),
 
 
-    -- Window management
+    --------------------- Window management ---------------------
     awful.key({'Mod1',}, 'Tab', function() awful.client.focus.byidx(1) end,
               {description = 'Switch between windows', group = 'Window Management'}),
     awful.key({metakey}, 'Right', function () awful.tag.incmwfact(0.03) end,
@@ -54,7 +54,7 @@ keys.globalkeys = gears.table.join(
               {description = 'Decrease master width factor', group = 'Window Management'}),
 
 
-    -- Applications
+    --------------------- Applications ---------------------
     awful.key({metakey}, 'Return', function() awful.util.spawn(terminal) end,
               {description='Spawn shell', group='Applications'}),
     awful.key({metakey}, 'n', function() awful.util.spawn(editor_launch) end,
@@ -72,7 +72,7 @@ keys.globalkeys = gears.table.join(
     awful.key({metakey,}, 'c', function() awful.util.spawn('speedcrunch') end,
               {description='Calculator', group='Applications'}),
 
-    -- Screenshots
+    --------------------- Screenshots ---------------------
     awful.key({metakey}, 'Print', function() awful.util.spawn('flameshot full -p '..os.getenv('HOME')..'/Pictures') end,
               {description='Fullscreen capture', group='Screenshots'}),
     awful.key({metakey, 'Shift'}, 'Print', function() awful.util.spawn('flameshot gui -p '..os.getenv('HOME')..'/Pictures') end,
@@ -88,7 +88,7 @@ keys.clientkeys = gears.table.join(
               {description = 'Toggle Floating', group = 'Window Management'})
 )
 
--- Mouse controls
+--------------------- Mouse controls ---------------------
 keys.clientbuttons = gears.table.join(
     awful.button({}, 1, function(c) client.focus = c end),
 
@@ -113,8 +113,8 @@ for i = 1, tags do
                         end
                   end,
                   {description = 'View tag #'..i, group = 'Tags'}),
-        
-        -- Move window to tag
+
+        --------------------- Move window to tag
         awful.key({metakey, 'Shift'}, '#'..i + 9,
                   function ()
                       if client.focus then
@@ -126,7 +126,7 @@ for i = 1, tags do
                   end,
                   {description = 'Move focused window to tag #'..i, group = 'Tags'}),
 
-        -- Toggle tag display.
+        --------------------- Toggle tag display.
         awful.key({metakey, 'Control'}, '#'..i + 9,
             function ()
                 local screen = awful.screen.focused()
@@ -138,7 +138,7 @@ for i = 1, tags do
             {description = 'Toggle tag #' .. i, group = 'Tags'}))
 end
 
--- Set globalkeys
+--------------------- Set globalkeys ---------------------
 root.keys(keys.globalkeys)
 
 return keys

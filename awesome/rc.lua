@@ -3,14 +3,14 @@
 --   / /| | | /| / / _ \/ ___/ __ \/ __  __ \/ _ \
 --  / ___ | |/ |/ /  __(__  ) /_/ / / / / / /  __/
 -- /_/  |_|__/|__/\___/____/\____/_/ /_/ /_/\___/
-
+-- For docs, go to: https://awesomewm.org/apidoc/documentation/05-awesomerc.md.html#
 -- AWESOME CONFIG (~/.config/awesome/rc.lua)
 -------------------------------------------------------
 
 -- Hide tmux keybinds from the hotkeys popup
 package.loaded['awful.hotkeys_popup.keys.tmux'] = {}
 
--- Importing libraries
+--------------------- Importing libraries ---------------------
 local gears = require('gears')
 local awful = require('awful')
 require('awful.autofocus')
@@ -18,7 +18,7 @@ local beautiful = require('beautiful')
 local keys = require('keys')
 
 --------------------- Loading the theme ---------------------
-theme_path = string.format('%s/.config/awesome/themes/%s/theme.lua', os.getenv('HOME'), 'Morning')
+theme_path = string.format('%s/.config/awesome/theme.lua', os.getenv('HOME'))
 beautiful.init(theme_path)
 
 -- Set the wallpaper
@@ -43,20 +43,7 @@ end
 awful.layout.layouts = {
     awful.layout.suit.fair,
     awful.layout.suit.floating,
-    --awful.layout.suit.max,
-    --awful.layout.suit.magnifier,
     awful.layout.suit.tile,
-    --awful.layout.suit.tile.left,
-    --awful.layout.suit.tile.bottom,
-    --awful.layout.suit.tile.top,
-    --awful.layout.suit.corner.nw,
-    --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
-    --awful.layout.suit.spiral.dwindle,
-    --awful.layout.suit.max.fullscreen,
-    --awful.layout.suit.corner.ne,
-    --awful.layout.suit.corner.sw,
-    --awful.layout.suit.corner.se,
 }
 
 awful.screen.connect_for_each_screen(function(s)
@@ -74,7 +61,7 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 
 awful.rules.rules = {
-    -- All windows
+    --------------------- All windows
     { rule = { },
       except_any = {class = {'Polybar'}}, -- Don't put border colors on polybar
       properties = { border_width = beautiful.border_width,
@@ -87,7 +74,7 @@ awful.rules.rules = {
                    }
     },
 
-    -- Floating exceptions
+    --------------------- Floating exceptions
     { rule_any = {
             class = {'Lxappearance', 'qt5ct'},
             name = {'Event Tester'}, --xev
@@ -113,11 +100,8 @@ awful.spawn.with_shell('~/.config/awesome/anime.sh')
 awful.spawn.with_shell('picom')
 awful.spawn.with_shell('dunst')
 awful.spawn.with_shell('mpd')
-awful.spawn.with_shell('conky')
 
---awful.spawn.with_shell('feh --bg-scale ~/.config/awesome/themes/Morning/wallpaper.jpg')
-
--- Garbage Collection
+--------------------- Garbage Collection ---------------------
 collectgarbage('setpause', 110)
 collectgarbage('setstepmul', 1000)
 --require('smart_borders'){ show_button_tooltips = true }
