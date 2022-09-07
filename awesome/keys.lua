@@ -12,7 +12,7 @@ local keys = {}
 metakey = 'Mod4'
 tags = 6
  keys.tags = tags     --Uncomment this if not using custom tag names
-terminal = 'urxvt'
+terminal = 'alacritty'
 editor = 'vim'
 editor_launch = terminal..' -e '..editor
 
