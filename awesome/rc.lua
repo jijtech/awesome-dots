@@ -17,11 +17,14 @@ require('awful.autofocus')
 local beautiful = require('beautiful')
 local keys = require('keys')
 
+--- menu.lua (work in progress)
+local menu = require("menu")
+
 --------------------- Loading the theme ---------------------
 theme_path = string.format('%s/.config/awesome/theme.lua', os.getenv('HOME'))
 beautiful.init(theme_path)
 
--- Set the wallpaper
+-- Set the wallpaper --- wallpapers, colors and fonts are determed in the theme file
 local function set_wallpaper(s)
     if beautiful.wallpaper then
         local wallpaper = beautiful.wallpaper
@@ -41,13 +44,13 @@ end
 
 --------------------- Layouts ---------------------
 awful.layout.layouts = {
+    awful.layout.suit.tile,
     awful.layout.suit.fair,
     awful.layout.suit.floating,
-    awful.layout.suit.tile,
 }
 
 awful.screen.connect_for_each_screen(function(s)
-  --  local tagTable = {'code', 'www', 'music', 'read', 'misc'}
+  --  local tagTable = {'code', 'www', 'music', 'read', 'chill'}
 
     --[[ Uncomment this if not using custom tag names (no. of tags will be derived from `tags` variable set in keys.lua)
     -- Also uncomment `keys.tags = tags` line in the Variables section in keys.lua!
@@ -57,7 +60,7 @@ awful.screen.connect_for_each_screen(function(s)
     end
     ]]
 
-    awful.tag({ "main", "www", "media", "dev", "chat", "misc" }, s, awful.layout.layouts[1])
+    awful.tag({ "main", "www", "media", "dev", "chat", "chill" }, s, awful.layout.layouts[1])
 end)
 
 awful.rules.rules = {
@@ -99,7 +102,6 @@ awful.spawn.with_shell('~/.config/polybar/launch.sh')
 awful.spawn.with_shell('~/.config/awesome/anime.sh')
 awful.spawn.with_shell('picom')
 awful.spawn.with_shell('dunst')
-awful.spawn.with_shell('mpd')
 
 --------------------- Garbage Collection ---------------------
 collectgarbage('setpause', 110)
