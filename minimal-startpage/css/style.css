@@ -25,7 +25,7 @@ h3 {
   display: flex;
   justify-content: center;
   margin: 0px 0px 10px 0px;
-  color: #40e66c;
+  color: #5BB462;
 
 }
 
@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-  color: #40e66c;
+  color: #5BB462;
 }
 
 .tcontent {
@@ -47,7 +47,7 @@ a:hover {
 }
 
 #startpage {
-  color: #40e66c;
+  color: #5BB462;
 }
 
 #name {
