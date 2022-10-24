@@ -22,4 +22,4 @@ Tools I use:
 
 
 awesome polybar xorg dunst rofi playerctl supergfxctl picom
-vim ranger mutt zathura firefox atom flameshot
+vim ranger mutt zathura firefox atom flameshot lxpolkit
