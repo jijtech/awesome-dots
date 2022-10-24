@@ -102,6 +102,7 @@ awful.spawn.with_shell('~/.config/polybar/launch.sh')
 awful.spawn.with_shell('~/.config/awesome/anime.sh')
 awful.spawn.with_shell('picom')
 awful.spawn.with_shell('dunst')
+awful.spawn.with_shell('lxpolkit')
 
 --------------------- Garbage Collection ---------------------
 collectgarbage('setpause', 110)
