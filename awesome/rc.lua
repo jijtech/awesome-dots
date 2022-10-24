@@ -18,7 +18,7 @@ local beautiful = require('beautiful')
 local keys = require('keys')
 
 --- menu.lua (work in progress)
-local menu = require("menu")
+--local mainmenu = require("mainmenu")
 
 --------------------- Loading the theme ---------------------
 theme_path = string.format('%s/.config/awesome/theme.lua', os.getenv('HOME'))
@@ -87,8 +87,103 @@ awful.rules.rules = {
         properties = {floating = true}
     }
 }
+--------------------- mainmenu ---------------------
+myawesomemenu = {
+    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+    { "manual", terminal .. " -e man awesome" },
+    { "edit config", editor_cmd .. " " .. awesome.conffile },
+    { "restart", awesome.restart },
+    { "quit", function() awesome.quit() end },
+    }
 
---------------------- Windows rules ---------------------
+ editormenu = {
+     { "gedit",     "gedit" },
+     { "micro",     terminal .. " -e micro" },
+     { "liri-text",    "liri-text" },
+ }
+
+ officemenu = {
+     { "files",     "pcmanfm" },
+     { "writer",    "loffice --writer" },
+     { "calc",      "loffice --calc" },
+     { "impress",   "loffice --impress" }
+ }
+
+ networkmenu = {
+     { "firefox",   "firefox" },
+	{ "falkon",	"falkon" },
+     { "w3m",       terminal .. " -e 'w3m google.go.in'" },
+     { "nw-manager", terminal .. " -e nmtui" }
+ }
+
+ grafixmenu = {
+     { "viewnior", "viewnior" },
+     { "color picker", "agave" },
+     { "gimp", "gimp" },
+     { "inkscape", "inkscape" }
+ }
+
+ termmenu = {
+    { "termite", "termite" },
+    { "terminator", "terminator" },
+    { "sakura",    "sakura" },
+    { "urxvtc",      "urxvtc" }
+ }
+
+multimediamenu = {
+    { "deadbeef", "deadbeef" },
+    { "ncmpcpp" , terminal .. " -e ncmpcpp" },
+    { "pulseaudio", "pavucontrol" },
+    { "vlc",    "vlc" }
+ }
+
+settingsmenu = {
+    { "gnome settings", "gnome-tweaks" },
+    { "manjaro settings", "manjaro-settings-manager" },
+    { "lxappearance", "lxappearance" },
+    { "qt5 settings", "qt5ct" },
+    { "font manager", "font-manager" }
+ }
+
+systemmenu = {
+    { "software-manager", "pamac-manager" },
+    { "pacman-mirrors", terminal .. " -e 'sudo pacman-mirrors -f'" },
+    { "gtop", terminal .. " -e gtop" },
+    { "kill", "xkill" }
+ }
+
+utilsmenu = {
+    { "screenshot", "scrot -d5 AwSm-Scrot-%d%b%y-%M%S.png -e 'mv $f ~/shots' && viewnior ~/shots/$f" },
+    { "toggleConky", "toggleAwesomeConky" },
+    { "virt manager", "virt-manager" },
+    { "screengrab", "screengrab" }
+ }
+
+myexitmenu = {
+	{ "logout", function() awesome.quit() end},
+	{ "reboot", "systemctl reboot" },
+	{ "shutdown", "systemctl poweroff" }
+}
+
+ mymainmenu = awful.menu({
+                items = {
+                    { "editors", editormenu },
+                    { "terms" , termmenu },
+                    { "network", networkmenu },
+                    { "office", officemenu },
+                    { "grafix", grafixmenu },
+                    { "multimedia", multimediamenu },
+                    { "settings", settingsmenu },
+                    { "system", systemmenu },
+                    { "utils", utilsmenu },
+                    { "awesome", myawesomemenu },
+                    { "exit options", myexitmenu}
+}
+                         })
+
+mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+                                      menu = mymainmenu })
+--------------------- Enable sloppy focus ---------------------
 client.connect_signal('mouse::enter', function(c)
     c:emit_signal('request::activate', 'mouse_enter', {raise = false})
 end)
@@ -98,7 +193,6 @@ client.connect_signal("property::maximized", function(c)
 		c.maximized = false
 	end
 end)
-
 --------------------- Colored borders ---------------------
 client.connect_signal('focus', function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal('unfocus', function(c) c.border_color = beautiful.border_normal end)
@@ -109,7 +203,6 @@ awful.spawn.with_shell('~/.config/awesome/anime.sh')
 awful.spawn.with_shell('picom')
 awful.spawn.with_shell('dunst')
 awful.spawn.with_shell('lxpolkit')
-
 --------------------- Garbage Collection ---------------------
 collectgarbage('setpause', 110)
 collectgarbage('setstepmul', 1000)

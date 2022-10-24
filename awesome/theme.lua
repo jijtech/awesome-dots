@@ -1,9 +1,9 @@
--- Morning
+-- Synthetic
 ------------------
 
 local theme = {}
 
-theme.font          = 'agave nerd font 12'
+theme.font          = 'agave nerd font 14'
 
 theme.bg_normal     = "#37395E"
 theme.bg_focus      = "#81a1c1"
@@ -35,6 +35,6 @@ theme.hotkeys_description_font = 'agave nerd font 14'
 theme.hotkeys_group_margin = 15
 
 -- Wallpaper
-theme.wallpaper = '~/.config/awesome/walls/wallpaper.jpg'
+theme.wallpaper = '~/.config/awesome/walls/Glacier_Falls.jpg'
 
 return theme
