@@ -88,9 +88,15 @@ awful.rules.rules = {
     }
 }
 
---------------------- Enable sloppy focus ---------------------
+--------------------- Windows rules ---------------------
 client.connect_signal('mouse::enter', function(c)
     c:emit_signal('request::activate', 'mouse_enter', {raise = false})
+end)
+
+client.connect_signal("property::maximized", function(c)
+	if c.maximized and c.class == "firefox" then
+		c.maximized = false
+	end
 end)
 
 --------------------- Colored borders ---------------------
