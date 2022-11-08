@@ -1,4 +1,4 @@
-/* @import url('/home/shrug/.fonts/Profont For Powerline.ttf'); */
+/* @import url('/home/$USER/.fonts/Profont For Powerline.ttf'); */
 
 .img {
   display: flex;
@@ -13,7 +13,7 @@ img {
 }
 html{
   background-color: #161616;
-  color: #1E1E1E
+  color: #FFFFFF
 }
 body {
   font-family: 'ProFont For Powerline', sans-serif;
