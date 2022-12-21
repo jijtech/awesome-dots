@@ -35,6 +35,6 @@ theme.hotkeys_description_font = 'agave nerd font 14'
 theme.hotkeys_group_margin = 15
 
 -- Wallpaper
-theme.wallpaper = '~/.config/awesome/walls/Glacier_Falls.jpg'
+theme.wallpaper = '~/.config/awesome/walls/lava_lamp.jpg'
 
 return theme

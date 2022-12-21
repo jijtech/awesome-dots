@@ -126,11 +126,19 @@ keys.clientkeys = gears.table.join(
 
 --------------------- Mouse controls ---------------------
 -- {{{ Mouse bindings
-root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
+keys.clientbuttons = gears.table.join(
+    awful.button({}, 1, function(c) client.focus = c end),
+
+    -- Meta + left click to move window
+    awful.button({metakey}, 1, function() awful.mouse.client.move() end),
+
+    -- Meta + middle click to kill window
+     awful.button({metakey}, 2, function(c) c:kill() end),
+
+    -- Meta + right click to resize window
+    awful.button({metakey}, 3, function() awful.mouse.client.resize() end)
+)
+
 -- }}}
 
 for i = 1, tags do
