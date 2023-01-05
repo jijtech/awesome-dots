@@ -14,6 +14,7 @@ uptime=$(uptime -p | sed -e 's/up //g')
 asusmode=$(supergfxctl -g)
 powermode=$(powerprofilesctl get)
 firewallstatus=$(cat /etc/ufw/ufw.conf | grep ENABLED)
+AC=$(acpi -b | grep -e "Battery 0")
 
 # Options
 shutdown=""
@@ -36,14 +37,14 @@ msg() {
 	rofi -theme "$HOME/.config/rofi/applets/styles/message.rasi" -e "Available Options  -  yes / y / no / n"
 }
 
-#AVATAR / brug feh eller rofi
-
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime
 GPU Mode: $asusmode
 Powermode: $powermode
-Firewall: $firewallstatus" -dmenu -selected-row 2)"
+Firewall: $firewallstatus
+AC: $AC" -dmenu -selected-row 2)"
+
 case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)

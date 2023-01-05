@@ -17,9 +17,6 @@ require('awful.autofocus')
 local beautiful = require('beautiful')
 local keys = require('keys')
 
---- menu.lua (work in progress)
---local mainmenu = require("mainmenu")
-
 --------------------- Loading the theme ---------------------
 theme_path = string.format('%s/.config/awesome/theme.lua', os.getenv('HOME'))
 beautiful.init(theme_path)

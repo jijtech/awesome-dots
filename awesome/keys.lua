@@ -35,9 +35,6 @@ keys.globalkeys = gears.table.join(
     awful.key({metakey}, 'Escape', awful.tag.history.restore,
               {description='Return to last tag', group='Tags'}),
 
-    awful.key({metakey, "Shift"   }, "q", awesome.quit,                                     -- Quit WM
-              {description = "Quit awesome", group = "awesome"}),
-
     awful.key({metakey,}, 'q', function() awful.util.spawn_with_shell("sh ~/.config/rofi/applets/menu/powermenu.sh") end, -- Show main menu
               {description='Powermenu', group='Awesome'}),
 
@@ -98,14 +95,8 @@ keys.globalkeys = gears.table.join(
     awful.key({metakey}, 'b', function() awful.util.spawn('firefox') end,                    -- Spawn web browser
               {description='Firefox', group='Applications'}),
 
-    awful.key({metakey,'Shift'}, 'e', function() awful.util.spawn('pcmanfm  ') end,          -- spawn GUI filemanager
-              {description='pcmanfm', group='Applications'}),
-
-    awful.key({metakey,}, 'e', function() awful.util.spawn('alacritty -e ranger  ') end,     -- spawn filemanager
-              {description='Ranger', group='Applications'}),
-
-    awful.key({metakey,}, 'i', function() awful.util.spawn('atom') end,                      -- spawn IDE
-              {description='Atom IDE', group='Applications'}),
+    awful.key({metakey,}, 'e', function() awful.util.spawn('thunar') end,     -- spawn filemanager
+              {description='thunar', group='Applications'}),
 
 --------------------- Screenshots ---------------------
     awful.key({metakey}, 'Print', function() awful.util.spawn('flameshot full -p '..os.getenv('HOME')..'/Pictures') end,

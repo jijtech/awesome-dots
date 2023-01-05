@@ -1,3 +1,3 @@
 #!/bin/bash
-asusctl anime image -x 7.0 -p ~/.config/awesome/themes/Morning/anime.png
+asusctl anime image -x 7.0 -p ~/.config/awesome/anime.png
 
