@@ -11,6 +11,7 @@ cp -r dunst $HOME/.config/
 cp -r zathura $HOME/.config/
 cp -r alacritty $HOME/.config/
 cp -r picom.conf $HOME/.config/
+cp -r gtk-3.0 $HOME/.config/
 cd ../
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
 unzip Agave.zip -d $HOME/.fonts/
