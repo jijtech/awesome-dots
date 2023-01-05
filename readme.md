@@ -26,5 +26,5 @@ Tools I use:
 
 
 awesome polybar xorg dunst rofi playerctl supergfxctl picom
-vim ranger mutt zathura firefox flameshot lxpolkit materia-gtk-theme
+vim thunar acpi zathura firefox flameshot lxpolkit materia-gtk-theme
 lxappearance blueman pavucontrol alacritty zsh ffmpeg ffmpeg-libs
