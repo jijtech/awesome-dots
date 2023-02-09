@@ -13,7 +13,11 @@ cp -r zathura $HOME/.config/
 cp -r tabby $HOME/.config/
 cp -r picom.conf $HOME/.config/
 cp -r gtk-3.0 $HOME/.config/
+cp -r icons $HOME/
 cd ../
+
+#hidding icons
+mv icons .icons
 
 #Getting fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Ubuntu.zip
@@ -21,6 +25,7 @@ unzip Ubuntu.zip -d $HOME/.fonts/
 fc-cache -vf
 
 #Grapping the terminal
+echo "installing Tabby terminal"
 wget https://github.com/Eugeny/tabby/releases/download/v1.0.188/tabby-1.0.188-linux-x64.rpm
 sudo dnf install tabby-1.0.188-linux-x64.rpm
 
