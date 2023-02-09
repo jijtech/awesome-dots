@@ -27,4 +27,4 @@ Tools I use:
 **Dependencies:**
 awesome polybar xorg dunst rofi playerctl supergfxctl picom
 vim pcmanfm acpi zathura firefox flameshot lxpolkit materia-gtk-theme
-lxappearance blueman pavucontrol alacritty zsh ffmpeg ffmpeg-libs
+lxappearance blueman pavucontrol alacritty zsh ffmpeg ffmpeg-libs deepin-icon-theme
