@@ -4,6 +4,11 @@
 ###########>INSTALLATION<#############
 ######################################
 
+#Grapping the terminal
+echo "installing dependencies"
+wget https://github.com/Eugeny/tabby/releases/download/v1.0.188/tabby-1.0.188-linux-x64.rpm
+sudo dnf install tabby-1.0.188-linux-x64.rpm awesome polybar xorg dunst rofi playerctl picom vim pcmanfm acpi zathura firefox lxpolkit materia-gtk-theme lxappearance blueman pavucontrol zsh ffmpeg ffmpeg-libs
+
 #moving stuff
 cp -r polybar $HOME/.config/
 cp -r rofi $HOME/.config/
@@ -23,11 +28,6 @@ mv icons .icons
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Ubuntu.zip
 unzip Ubuntu.zip -d $HOME/.fonts/
 fc-cache -vf
-
-#Grapping the terminal
-echo "installing Tabby terminal"
-wget https://github.com/Eugeny/tabby/releases/download/v1.0.188/tabby-1.0.188-linux-x64.rpm
-sudo dnf install tabby-1.0.188-linux-x64.rpm
 
 #finishing cleanup
 rm -rf dots
