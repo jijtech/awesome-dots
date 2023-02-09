@@ -15,7 +15,7 @@ Tools I use:
    
    ▴ **Font** -> [Ubuntu Nerd Font](https://www.nerdfonts.com/#home)
      
-   ▴ **Terminal** -> [Alacritty]
+   ▴ **Terminal** -> [Tabby Terminal](https://tabby.sh/)
    
    ▴ **Launcher** -> [Rofi](drun mode)
 
@@ -25,6 +25,7 @@ Tools I use:
    ▴ **Doc Viewer** -> [Zathura]
 
 
+**Dependencies**
 awesome polybar xorg dunst rofi playerctl supergfxctl picom
 vim thunar acpi zathura firefox flameshot lxpolkit materia-gtk-theme
 lxappearance blueman pavucontrol alacritty zsh ffmpeg ffmpeg-libs
