@@ -5,7 +5,7 @@
 * {
     background-color:       @background;
     text-color:             @foreground;
-	font:				 	"Nerdfont 16";
+	font:				 	"meslo Nerdfont 16";
 }
 
 window {
