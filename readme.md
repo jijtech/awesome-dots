@@ -13,7 +13,7 @@ Tools I use:
    ▴ **WM** -> [Awesome-stable](https://awesomewm.org/)
     !:I will be switching to Debian 12 when stable
    
-   ▴ **Font** -> [Agave Nerd Font](https://www.nerdfonts.com/#home)
+   ▴ **Font** -> [Ubuntu Nerd Font](https://www.nerdfonts.com/#home)
      
    ▴ **Terminal** -> [Alacritty]
    
