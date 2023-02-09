@@ -25,7 +25,7 @@ Tools I use:
    ▴ **Doc Viewer** -> [Zathura]
 
 
-**Dependencies**
+**Dependencies:**
 awesome polybar xorg dunst rofi playerctl supergfxctl picom
 vim thunar acpi zathura firefox flameshot lxpolkit materia-gtk-theme
 lxappearance blueman pavucontrol alacritty zsh ffmpeg ffmpeg-libs
