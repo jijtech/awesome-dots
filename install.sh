@@ -10,7 +10,7 @@ cp -r rofi $HOME/.config/
 cp -r awesome $HOME/.config/
 cp -r dunst $HOME/.config/
 cp -r zathura $HOME/.config/
-cp -r alacritty $HOME/.config/
+cp -r tabby $HOME/.config/
 cp -r picom.conf $HOME/.config/
 cp -r gtk-3.0 $HOME/.config/
 cd ../
