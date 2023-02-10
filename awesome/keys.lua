@@ -15,7 +15,7 @@ local _M = {} -- module
 metakey = 'Mod4'
 tags = 6
 keys.tags = tags
-terminal = 'alacritty'
+terminal = 'tabby'
 editor = 'vim'
 editor_cmd = terminal..' -e '..editor
 
@@ -95,8 +95,8 @@ keys.globalkeys = gears.table.join(
     awful.key({metakey}, 'b', function() awful.util.spawn('firefox') end,                    -- Spawn web browser
               {description='Firefox', group='Applications'}),
 
-    awful.key({metakey,}, 'e', function() awful.util.spawn('thunar') end,     -- spawn filemanager
-              {description='thunar', group='Applications'}),
+    awful.key({metakey,}, 'e', function() awful.util.spawn('krusader') end,     -- spawn filemanager
+              {description='krusader', group='Applications'}),
 
 --------------------- Screenshots ---------------------
     awful.key({metakey}, 'Print', function() awful.util.spawn('flameshot full -p '..os.getenv('HOME')..'/Pictures') end,
