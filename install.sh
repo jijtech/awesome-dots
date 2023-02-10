@@ -21,6 +21,9 @@ cp -r gtk-3.0 $HOME/.config/
 cp -r icons $HOME/
 cd ../
 
+#setting qt5
+echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> .bash_profiles
+
 #hidding icons
 mv icons .icons
 
