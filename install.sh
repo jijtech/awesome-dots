@@ -7,7 +7,7 @@
 #Grapping the terminal
 echo "installing dependencies"
 wget https://github.com/Eugeny/tabby/releases/download/v1.0.188/tabby-1.0.188-linux-x64.rpm
-sudo dnf install tabby-1.0.188-linux-x64.rpm awesome polybar xorg dunst rofi playerctl picom vim pcmanfm acpi zathura firefox lxpolkit materia-gtk-theme lxappearance blueman pavucontrol zsh ffmpeg ffmpeg-libs deepin-icon-theme
+sudo dnf install tabby-1.0.188-linux-x64.rpm awesome polybar xorg dunst rofi playerctl picom vim pcmanfm acpi zathura firefox lxpolkit materia-gtk-theme lxappearance qt5ct blueman pavucontrol zsh ffmpeg ffmpeg-libs deepin-icon-theme
 
 #moving stuff
 cp -r polybar $HOME/.config/
