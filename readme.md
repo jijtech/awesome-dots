@@ -19,7 +19,7 @@ Tools I use:
    
    ▴ **Launcher** -> [Rofi](drun mode)
 
-   ▴ **FileManager** -> [Pcmanfm]
+   ▴ **FileManager** -> [Krusader]
    
    ▴ **Doc Viewer** -> [Zathura]
 
