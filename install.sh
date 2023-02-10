@@ -36,4 +36,4 @@ fc-cache -vf
 rm -rf dots
 
 #report completion
-echo "Install done! Do 'xrdb ~/.Xresources' then Logout or Restart WM"
+echo "Installation completed!"
