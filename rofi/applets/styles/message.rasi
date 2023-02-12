@@ -5,7 +5,7 @@
 * {
     background-color:       @background;
     text-color:             @foreground;
-	font:				 	"meslo Nerdfont 16";
+	font:				 	"UbuntuMono NF 16";
 }
 
 window {
