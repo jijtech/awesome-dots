@@ -10,8 +10,7 @@ Tools I use:
 
    ▴ **Distro** -> [Fedora "everyting"(basicX install)](https://alt.fedoraproject.org/en/)
 
-   ▴ **WM** -> [Awesome-stable](https://awesomewm.org/)
-    !:I will be switching to Debian 12 when stable
+   ▴ **WM** -> [Awesome-stable](https://awesomewm.org/]
    
    ▴ **Font** -> [Ubuntu Nerd Font](https://www.nerdfonts.com/#home)
      
