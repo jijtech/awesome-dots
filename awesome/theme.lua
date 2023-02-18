@@ -3,7 +3,7 @@
 
 local theme = {}
 
-theme.font          = 'Ubuntu nerd font 12'
+theme.font          = 'Ubuntu NF 12'
 
 theme.bg_normal     = "#37395E"
 theme.bg_focus      = "#81a1c1"
@@ -30,8 +30,8 @@ theme.hotkeys_border_width = 1
 theme.hotkeys_border_color = '#81a1c1'
 theme.hotkeys_modifiers_fg = '#8888CC'
 theme.hotkeys_label_fg = '#1e1e1e'
-theme.hotkeys_font = 'ubuntu mono nerd font 14'
-theme.hotkeys_description_font = 'ubuntu nerd font 14'
+theme.hotkeys_font = 'ubuntu NF 14'
+theme.hotkeys_description_font = 'ubuntu NF 14'
 theme.hotkeys_group_margin = 15
 
 -- Wallpaper
