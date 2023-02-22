@@ -19,12 +19,10 @@ Tools I use:
    ▴ **Launcher** -> [Rofi](drun mode)
 
    ▴ **FileManager** -> [Krusader]
-   
-   ▴ **Doc Viewer** -> [Zathura]
 
 [Fixing font rendering <- ](https://wiki.manjaro.org/index.php/Improve_Font_Rendering)
 
 **Dependencies:**
 awesome polybar xorg dunst rofi playerctl supergfxctl picom
-vim krusador acpi zathura firefox flameshot lxpolkit materia-gtk-theme
+vim krusador acpi firefox flameshot lxpolkit materia-gtk-theme
 lxappearance blueman pavucontrol zsh ffmpeg ffmpeg-libs deepin-icon-theme
