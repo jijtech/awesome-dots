@@ -22,6 +22,7 @@ Tools I use:
    
    ▴ **Doc Viewer** -> [Zathura]
 
+[Fixing font rendering <- ](https://wiki.manjaro.org/index.php/Improve_Font_Rendering)
 
 **Dependencies:**
 awesome polybar xorg dunst rofi playerctl supergfxctl picom
