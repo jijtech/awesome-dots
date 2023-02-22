@@ -10,7 +10,7 @@ Tools I use:
 
    ▴ **Distro** -> [Fedora "everyting"(basicX install)](https://alt.fedoraproject.org/en/)
 
-   ▴ **WM** -> [Awesome-stable](https://awesomewm.org/]
+   ▴ **WM** -> [Awesome-stable](https://awesomewm.org/)
    
    ▴ **Font** -> [Ubuntu Nerd Font](https://www.nerdfonts.com/#home)
      
