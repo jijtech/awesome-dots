@@ -22,5 +22,21 @@ System Tools 1 use:
 
    The rest of my application suite is installed via flatpak:
 
+   * **Browser** -> [Firefox with my config](https://github.com/jijtech/Firefox-chrome)
+   * **Thunderbird**
+   * **KeepassXC**
+   * **Bitwarden**
+   * **Steam**
+   * **Lutris**
+   * **VSCode**
+   * **Flatseal**
+   * **ISOmediaWriter**
+   * **Qbittorrent**
+   * **Signal**
+   * **ONLYoffice**
+   * **Cider**
+   * **Bleachbit**
+   * **Discord**
+   * **Moonlight**
 [Fixing font rendering <- ](https://wiki.manjaro.org/index.php/Improve_Font_Rendering)
 
