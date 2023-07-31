@@ -6,7 +6,7 @@
 
 <img src='Desktop2.png' alt='AwesomeWM' align='right' width='400px'/>
 
-Tools I use:
+System Tools 1 use:
 
    ▴ **Distro** -> [NixOS](https://nixos.org/)
 
@@ -19,6 +19,8 @@ Tools I use:
    ▴ **Launcher** -> [Rofi]
 
    ▴ **FileManager** -> [thunar]
+
+   The rest of my application suite is installed via flatpak:
 
 [Fixing font rendering <- ](https://wiki.manjaro.org/index.php/Improve_Font_Rendering)
 
