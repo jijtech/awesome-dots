@@ -8,21 +8,17 @@
 
 Tools I use:
 
-   ▴ **Distro** -> [Fedora "everyting"(basicX install)](https://alt.fedoraproject.org/en/)
+   ▴ **Distro** -> [NixOS](https://nixos.org/)
 
    ▴ **WM** -> [Awesome-stable](https://awesomewm.org/)
    
    ▴ **Font** -> [Ubuntu Nerd Font](https://www.nerdfonts.com/#home)
      
-   ▴ **Terminal** -> [Tabby Terminal](https://tabby.sh/)
+   ▴ **Terminal** -> [Kitty](https://sw.kovidgoyal.net/kitty/)
    
-   ▴ **Launcher** -> [Rofi](drun mode)
+   ▴ **Launcher** -> [Rofi]
 
-   ▴ **FileManager** -> [Krusader]
+   ▴ **FileManager** -> [thunar]
 
 [Fixing font rendering <- ](https://wiki.manjaro.org/index.php/Improve_Font_Rendering)
 
-**Dependencies:**
-awesome polybar xorg dunst rofi playerctl supergfxctl picom
-vim krusador acpi firefox flameshot lxpolkit materia-gtk-theme
-lxappearance blueman pavucontrol zsh ffmpeg ffmpeg-libs deepin-icon-theme
