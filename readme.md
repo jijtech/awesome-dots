@@ -1,6 +1,6 @@
 <h1 align='center'>Dotfiles</h1>
 
-**Awesome Dots!**
+**Awesome Dots! ~ Use NixOS! Arch users look so small from up here**
 
 <img src='Desktop.png' alt='AwesomeWM' align='right' width='400px'/>
 
@@ -38,5 +38,6 @@ System Tools 1 use:
    * **Bleachbit**
    * **Discord**
    * **Moonlight**
+
 [Fixing font rendering <- ](https://wiki.manjaro.org/index.php/Improve_Font_Rendering)
 
