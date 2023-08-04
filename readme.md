@@ -1,6 +1,6 @@
 <h1 align='center'>Dotfiles</h1>
 
-**Awesome Dots! ~ Use NixOS! Arch users look so small from up here**
+**~ Upgrade to NixOS. Arch users look so.. tiny from up here.**
 
 <img src='Desktop.png' alt='AwesomeWM' align='right' width='400px'/>
 
